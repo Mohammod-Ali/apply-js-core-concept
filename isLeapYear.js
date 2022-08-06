@@ -1,11 +1,12 @@
 function isLeapYear(year){
     const remainder = year % 4;
     if (remainder == 0){
-        console.log('Your year is leap year', year)
+        return true
     }
     else{
-        console.log('Your year is not a leap year', year)
+        return false
     }
 }
 
-isLeapYear(2020)
+const isMyYearLeapYear = isLeapYear(2020);
+console.log(isMyYearLeapYear)
