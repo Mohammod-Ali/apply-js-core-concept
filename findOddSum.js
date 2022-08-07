@@ -4,10 +4,27 @@ function getSumOfAnArray(numbers){
         const index = i;
         const element = numbers[index]
         sum = sum + element;
-        console.log(index, element)
+        // console.log(index, element)
     }
     return sum
 }
 
-const myNumbers = [12, 38, 32, 34]
-getSumOfAnArray(myNumbers)
+function getOddNumbersOfAnArray(numbers){
+    const oddNumbers = [];
+    for(let i = 0; i < numbers.length; i++){
+        const index = i;
+        const element = numbers[index];
+        if(element % 2 !== 0){
+            console.log(index, element)
+            oddNumbers.push(element)
+        }
+        
+    }
+    return oddNumbers
+}
+
+const myNumbers = [12, 38, 32, 34, 23, 33, 50]
+const oddNumbers = getOddNumbersOfAnArray(myNumbers)
+console.log(oddNumbers)
+const oddNumbersSum = getSumOfAnArray(oddNumbers)
+console.log('odd number sum ', oddNumbersSum)
